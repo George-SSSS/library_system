@@ -1,0 +1,5 @@
+rsa:
+  # 存储于 resource 中的公钥文件路径
+  public-key-file: rsa/id_rsa.pub
+  # 存储于 resource 中的私钥文件路径
+  private-key-file: rsa/id_rsa
