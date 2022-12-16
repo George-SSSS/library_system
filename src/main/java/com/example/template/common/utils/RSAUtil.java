@@ -1,4 +1,4 @@
-package com.example.template.utils;
+package com.example.template.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +21,8 @@ public class RSAUtil {
     private static final String PUBLIC_KEY_FILE = "rsa/id_rsa.pub";
     private static final String PRIVATE_KEY_FILE = "rsa/id_rsa";
 
+    // 生成秘钥
     public static void main(String[] args) throws Exception {
-        // 生成秘钥
-        // genKeyPair();
-
         String plain = "nihao";
         String encryptedStr = encrypt(plain, new File(PUBLIC_KEY_FILE));
         System.out.println(encryptedStr);

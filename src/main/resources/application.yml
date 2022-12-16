@@ -1,6 +1,15 @@
 spring:
+  datasource:
+    username: root
+    password: ******
+    url: jdbc:mysql://localhost:3306/temp_db?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   profiles:
     active: rsa, template
+
+server:
+  port: 8080
 
 rsa:
   # 生成秘钥的长度
