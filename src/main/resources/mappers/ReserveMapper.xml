@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.whu.library.modules.mapper.ReserveMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.edu.whu.library.modules.pojo.Reserve">
+        <id column="id" property="id" />
+        <result column="reader_id" property="readerId" />
+        <result column="doc_id" property="docId" />
+        <result column="lib_id" property="libId" />
+        <result column="copy_id" property="copyId" />
+        <result column="reserve_state" property="reserveState" />
+        <result column="reserve_time" property="reserveTime" />
+        <result column="deadline" property="deadline" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, reader_id, doc_id, lib_id, copy_id, reserve_state, reserve_time, deadline
+    </sql>
+
+</mapper>

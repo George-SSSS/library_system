@@ -1,1 +1,1 @@
-testing for aliyun OSS
+Project of school course 'Advanced Database System Design'

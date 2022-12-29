@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.whu.library.modules.mapper.DocumentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.edu.whu.library.modules.pojo.Document">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="publisher_id" property="publisherId" />
+        <result column="publisher_date" property="publisherDate" />
+        <result column="types" property="types" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, publisher_id, publisher_date, types
+    </sql>
+
+</mapper>
