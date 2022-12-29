@@ -55,4 +55,4 @@ rsa/
 *.yml
 
 # Jasypt
-/src/main/java/cn/edu/whu/library/common/utils/JasyptEncryptorUtils.java
+src/main/java/cn/edu/whu/library/common/utils/JasyptEncryptorUtils.java
