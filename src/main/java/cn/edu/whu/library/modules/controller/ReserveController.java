@@ -17,7 +17,7 @@ import java.util.List;
  * @since 2022-12-15
  */
 @RestController
-@RequestMapping("/modules/reserve")
+@RequestMapping("/reserve")
 public class ReserveController {
 
     @Autowired

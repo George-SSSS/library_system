@@ -22,4 +22,7 @@
         id, account, password, username, address, phone_number, reader_type, num_of_reserving, num_of_borrowing, total_borrow, fine
     </sql>
 
+    <select id="findAllByAccount" parameterType="java.lang.String" resultType="cn.edu.whu.library.modules.pojo.Reader">
+        select * from reader where account = #{account}
+    </select>
 </mapper>

@@ -1,8 +1,9 @@
 spring:
   datasource:
-    username: root
-    password: ITK37412
     url: jdbc:mysql://localhost:3306/library?serverTimezone=UTC
+    username: ${DATASOURCE_USERNAME:ENC(52b547T37rSrYIxyCPEwhw==)}
+#    password: 123456
+    password: ${DATASOURCE_PASSWORD:ENC(6MmFDld1uObDc52GBXlHDg==)}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   profiles:
@@ -14,3 +15,12 @@ server:
 rsa:
   # 生成秘钥的长度
   key-size: 512
+
+jasypt:
+  encryptor:
+    password: library_system
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml

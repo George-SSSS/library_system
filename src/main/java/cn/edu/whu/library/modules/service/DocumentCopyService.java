@@ -1,7 +1,10 @@
 package cn.edu.whu.library.modules.service;
 
+import cn.edu.whu.library.modules.pojo.Document;
 import cn.edu.whu.library.modules.pojo.DocumentCopy;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>

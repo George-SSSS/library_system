@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2022-12-15
  */
 @RestController
-@RequestMapping("/modules/document-copy")
+@RequestMapping("/document-copy")
 public class DocumentCopyController {
 
 }
