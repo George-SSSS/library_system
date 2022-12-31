@@ -17,5 +17,5 @@ import java.util.List;
  */
 
 public interface DocumentMapper extends BaseMapper<Document> {
-    List<Document> findAvailableDocument(@Param("libId") Integer libId, @Param("state") Integer state);
+
 }

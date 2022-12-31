@@ -46,7 +46,7 @@ public class Document implements Serializable {
      * 出版日期
      */
     @TableField("publisher_date")
-    private LocalDate publisherDate;
+    private String publisherDate;
 
     /**
      * 0: book, 1: journal volume, 2: conference proceedings

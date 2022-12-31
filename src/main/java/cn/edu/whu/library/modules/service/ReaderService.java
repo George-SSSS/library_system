@@ -1,5 +1,6 @@
 package cn.edu.whu.library.modules.service;
 
+import cn.edu.whu.library.common.mybatisplus.pojo.PageParam;
 import cn.edu.whu.library.modules.pojo.Reader;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,6 +16,6 @@ import java.util.List;
  * @since 2022-12-15
  */
 public interface ReaderService extends IService<Reader>, UserDetailsService {
-    List<Reader> findAllReader();
+    List<Reader> findAllReader(PageParam pageParam);
     List<Reader> findByAccount(String account);
 }

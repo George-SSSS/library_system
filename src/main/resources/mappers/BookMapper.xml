@@ -14,5 +14,15 @@
     <sql id="Base_Column_List">
         id, document_id, ISBN, author_list
     </sql>
+    <select id="findBookInfoByDocId" resultType="cn.edu.whu.library.modules.vo.DocumentVo">
+        SELECT document_id, title, p.name as publisher_name, publisher_date, types as document_type, isbn, author_list as author
+        FROM document d
+            JOIN book b ON d.id = b.document_id
+            JOIN publisher p ON d.publisher_id = p.id
+        WHERE document_id IN
+            <foreach item="docId" collection="docIdList" open="(" separator="," close=")">
+                #{docId}
+            </foreach>
+    </select>
 
 </mapper>

@@ -31,7 +31,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/**", "/reader/**").hasAnyRole("STUDENT", "FACULTY", "STAFF")
                 .antMatchers("/admin/**", "/reserve/**").hasAnyRole("FACULTY", "STAFF")
                 .and()
-                .formLogin().loginPage("/login").defaultSuccessUrl("/user")
+                .formLogin().loginPage("/login").defaultSuccessUrl("/index")
                 // 自定义参数用户名密码
                 .usernameParameter("myusername").passwordParameter("mypassword")
                 .and()

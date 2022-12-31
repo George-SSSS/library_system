@@ -1,7 +1,11 @@
 package cn.edu.whu.library.modules.mapper;
 
 import cn.edu.whu.library.modules.pojo.Book;
+import cn.edu.whu.library.modules.vo.DocumentVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface BookMapper extends BaseMapper<Book> {
 
+    List<DocumentVo> findBookInfoByDocId(@Param("docIdList") List<Integer> docIdList);
 }

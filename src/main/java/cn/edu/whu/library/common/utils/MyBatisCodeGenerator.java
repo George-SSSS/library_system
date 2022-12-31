@@ -35,8 +35,8 @@ public class MyBatisCodeGenerator {
                 // 策略配置
                 .strategyConfig((scanner, builder) -> {
                     builder
+                            .addInclude("document")                                       // 默认扫描所有表
                             /**
-                            .addInclude()                                       // 默认扫描所有表
                             .addTablePrefix("sys_")                             // 过滤表前缀
                             .addTableSuffix("_bak")                             // 过滤表后缀
                             */

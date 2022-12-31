@@ -15,5 +15,8 @@
     <sql id="Base_Column_List">
         id, lib_id, document_id, seq_copy, state
     </sql>
+    <select id="findCopyByDocumentId" resultType="cn.edu.whu.library.modules.pojo.DocumentCopy">
+        select lib_id, document_id from document_copy where document_id = #{documentId} group by lib_id, document_id
+    </select>
 
 </mapper>

@@ -12,5 +12,13 @@
     <sql id="Base_Column_List">
         id, name
     </sql>
+    <select id="findAuthorListById" resultType="java.lang.String">
+        SELECT name
+        FROM author
+        WHERE id IN
+        <foreach item="authorId" collection="authorIdList" open="(" separator="," close=")">
+            #{authorId}
+        </foreach>
+    </select>
 
 </mapper>

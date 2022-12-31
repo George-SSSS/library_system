@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.math.BigInteger;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,7 +41,7 @@ public class Book implements Serializable {
      * 书本 ISBN
      */
     @TableField("ISBN")
-    private Integer isbn;
+    private BigInteger isbn;
 
     /**
      * 作者 ID list

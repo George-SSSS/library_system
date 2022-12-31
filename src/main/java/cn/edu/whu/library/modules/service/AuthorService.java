@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-12-15
  */
 public interface AuthorService extends IService<Author> {
-
+    String findAuthorListById(String authors);
 }

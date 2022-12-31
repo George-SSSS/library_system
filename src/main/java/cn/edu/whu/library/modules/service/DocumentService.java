@@ -1,11 +1,10 @@
 package cn.edu.whu.library.modules.service;
 
-import cn.edu.whu.library.modules.mapper.DocumentCopyMapper;
+import cn.edu.whu.library.common.mybatisplus.pojo.PageParam;
+import cn.edu.whu.library.modules.enums.DocumentType;
 import cn.edu.whu.library.modules.pojo.Document;
-import cn.edu.whu.library.modules.pojo.DocumentCopy;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import cn.edu.whu.library.modules.vo.DocumentVo;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -19,5 +18,5 @@ import java.util.List;
  */
 public interface DocumentService extends IService<Document> {
 
-    List<Document> findAvailableDocument(Integer libId, Integer state);
+    List<DocumentVo> findDocumentByLibIdAndState(Integer libId, Integer state, PageParam pageParam);
 }

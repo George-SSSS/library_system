@@ -16,19 +16,5 @@
         id, title, publisher_id, publisher_date, types
     </sql>
 
-    <select id="findAvailableDocument" parameterType="java.lang.Integer" resultType="cn.edu.whu.library.modules.pojo.Document">
-        select * from document where id in (
-            select document_id from document_copy
-            <where>
-                true
-                <if test="libId != null">
-                    and lib_id = #{libId}
-                </if>
-                <if test="state != null">
-                    and state = #{state}
-                </if>
-            </where>
-        )
-    </select>
 
 </mapper>
